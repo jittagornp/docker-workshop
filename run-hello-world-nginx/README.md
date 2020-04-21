@@ -14,6 +14,6 @@ $ docker ps -a
 $ docker images
 ```
 
-### 3 Test
+### 3. Test
 
 > http://<HOST_NAME or IP>
