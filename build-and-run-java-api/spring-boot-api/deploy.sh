@@ -13,4 +13,4 @@ docker rmi spring-boot-api || true
 docker build -t spring-boot-api .
 
 # run container
-docker run -d --name=spring-boot-api -p 3002:80 --restart=always spring-boot-api
+docker run -d --name=spring-boot-api -p 3002:80 --restart=always --link=mysql spring-boot-api
