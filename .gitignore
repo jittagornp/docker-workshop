@@ -2,3 +2,6 @@
 /build-and-run-java-api/spring-boot-api/target/
 /build-and-run-java-api/spring-boot-api/.classpath
 /build-and-run-java-api/spring-boot-api/.project
+
+/build-and-run-vuejs/frontend/node_modules/
+/build-and-run-vuejs/frontend/dist/
