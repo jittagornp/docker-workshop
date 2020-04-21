@@ -2,7 +2,7 @@
 rm -rf dist
 
 #build source code (.jar file)
-docker run --rm -v $(pwd):/web node:12.13.0 cd frontend && yarn install && yarn build
+docker run --rm -v $(pwd):/web node:12.13.0 yarn install && yarn build
 
 # remove container and images
 docker stop vuejs-frontend || true
