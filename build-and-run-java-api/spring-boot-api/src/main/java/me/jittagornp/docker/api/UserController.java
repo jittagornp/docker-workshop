@@ -22,7 +22,7 @@ import reactor.core.publisher.Mono;
  * @author jitta
  */
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UserController {
 
     private final UserRepository userRepository;
