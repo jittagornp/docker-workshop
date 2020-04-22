@@ -1,4 +1,4 @@
-# 1. Docker Workshop
+# Docker Workshop
 
 1. [Run Hello World Nginx](./run-hello-world-nginx/)
 2. [Run Mysql](./run-mysql/)
