@@ -20,3 +20,10 @@ $ docker images
 ### 3. Test
 
 Connect to Database by Mysql Workbench
+
+```plaintext
+host : <DOCKER_HOST>  
+port : 3306  
+username : root  
+password : NNpbLDqK  
+```
