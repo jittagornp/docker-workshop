@@ -1,4 +1,5 @@
-# Run VueJS on Nginx (Connect to API (3)) 
+# Change VueJS (4) to Reverse Proxy 
+
 # 1. Clone
 
 ```sh
