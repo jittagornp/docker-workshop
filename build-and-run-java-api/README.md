@@ -16,4 +16,5 @@ $ ./deploy.sh
 
 # 3. Test 
 
-> http://<HOST_NAME or IP>:3002 
+> http://<HOST_NAME or IP>:3002   
+> http://<HOST_NAME or IP>:3002/users     
