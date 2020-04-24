@@ -1,0 +1,72 @@
+pipeline {
+    
+    agent any  
+
+    stages {
+
+        stage('Init'){
+            steps {
+                echo 'Init'
+                echo '******************************'
+                sh "pwd"
+                sh "ls -l"
+                sh "git --version" 
+                sh "docker --version"
+                echo "workspace path => ${env.WORKSPACE}"
+            }
+        }
+
+        stage('Yarn Install') {
+            steps {
+                echo 'Yarn Install'
+                echo '******************************'
+                sh 'docker run --rm -v $(pwd):/web node:12.13.0 yarn --cwd ./web/ install'
+                sh "ls -l" 
+            }
+        }
+
+        stage('Yarn Build') {
+            steps {
+                echo 'Yarn Build'
+                echo '******************************'
+                sh 'docker run --rm -v $(pwd):/web node:12.13.0 yarn --cwd ./web/ build'
+                sh "ls -l" 
+            }
+        }
+        
+        stage('Docker Build Image') {
+            steps {
+                echo 'Docker Build Image'
+                echo '******************************'
+                sh 'docker build -t registry.whereis.store/vuejs-frontend .'
+            }
+        }
+        
+        stage('Docker Push') {
+            steps {
+                echo 'Docker Push'
+                echo '******************************'
+                sh 'docker login -u itsme -p D5CmrAQH https://registry.whereis.store'
+                sh 'docker push registry.whereis.store/vuejs-frontend'
+                sh 'docker logout https://registry.whereis.store'
+            }
+        }
+        
+        stage('Docker Remove Image') {
+            steps {
+                echo 'Docker Remove Image'
+                echo '******************************'
+                sh 'docker rmi registry.whereis.store/vuejs-frontend'
+            }
+        }
+
+        stage('Deploy') {
+            steps{
+                echo 'Deploy'
+                echo '******************************'
+                sh 'chmod 777 deploy.sh'
+                sh "sh deploy.sh"
+            }
+        }
+    }
+}
