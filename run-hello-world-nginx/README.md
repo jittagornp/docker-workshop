@@ -4,7 +4,7 @@
 ```sh
 $ docker run -d \
     --name=hello-world-nginx \
-    -p 80:80 \
+    -p 3000:80 \
     --restart=always nginx
 ```
 
@@ -16,4 +16,4 @@ $ docker images
 
 ### 3. Test
 
-> http://<HOST_NAME or IP>
+> http://<HOST_NAME or IP>:3000
