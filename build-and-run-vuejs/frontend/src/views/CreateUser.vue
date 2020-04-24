@@ -33,7 +33,7 @@ export default {
   methods: {
     doSave() {
       axios
-        .post("http://178.128.219.218:3001/users", this.user)
+        .post("http://178.128.219.218:3002/users", this.user)
         .then(() => this.$router.push('/'));
     }
   }

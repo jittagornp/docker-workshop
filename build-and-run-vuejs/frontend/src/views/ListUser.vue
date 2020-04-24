@@ -43,12 +43,12 @@ export default {
   methods: {
     loadData() {
       axios
-        .get("http://178.128.219.218:3001/users")
+        .get("http://178.128.219.218:3002/users")
         .then(resp => (this.users = resp.data));
     },
     doDelete(user) {
       axios
-        .delete("http://178.128.219.218:3001/users/" + user.id)
+        .delete("http://178.128.219.218:3002/users/" + user.id)
         .then(() => this.loadData());
     }
   }
