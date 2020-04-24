@@ -32,13 +32,13 @@ export default {
   },
   mounted() {
     axios
-      .get(`https://whereis.store/api/users/${this.$route.params.id}`)
+      .get(`http://178.128.219.218:3001/users/${this.$route.params.id}`)
       .then(resp => this.user = resp.data);
   },
   methods: {
     doSave() {
       axios
-        .put(`https://whereis.store/api/users/${this.user.id}`, this.user)
+        .put(`http://178.128.219.218:3001/users/${this.user.id}`, this.user)
         .then(() => this.$router.push("/"));
     }
   }

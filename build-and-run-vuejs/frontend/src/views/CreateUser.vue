@@ -33,7 +33,7 @@ export default {
   methods: {
     doSave() {
       axios
-        .post("https://whereis.store/api/users", this.user)
+        .post("http://178.128.219.218:3001/users", this.user)
         .then(() => this.$router.push('/'));
     }
   }
