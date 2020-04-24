@@ -1,5 +1,11 @@
 # Docker Workshop
 
+# Google Slide
+
+- [https://docs.google.com/presentation/d/13FwLNTN8dKf2IFi9YDTtwyT_VAElzJ1XS1J26Cskkco/edit?usp=sharing](https://docs.google.com/presentation/d/13FwLNTN8dKf2IFi9YDTtwyT_VAElzJ1XS1J26Cskkco/edit?usp=sharing)
+
+# Steps 
+
 1. [Run Hello World Nginx](./run-hello-world-nginx/)
 2. [Run Mysql](./run-mysql/)
 3. [Build and Run Java Backend API (Connect to Mysql (2))](./build-and-run-java-api/)
